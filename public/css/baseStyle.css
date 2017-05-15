@@ -1,0 +1,49 @@
+:root {
+    font-size:20px ;
+}
+html{
+  height: 100%;
+}
+body{
+  margin: 0;
+  background-image: url(http://www.transparenttextures.com/patterns/60-lines.png);
+  background-attachment: fixed;
+}
+#header{
+  text-align:center;
+  width: 100%;
+  padding: 3vh 0 3vh 0;
+  background: green;
+  /*border-bottom: 3px solid #071C24;*/
+}
+#header *{
+  margin: 0;
+  font-size: 5vh;
+}
+#header h1{
+ font-family: 'Rubik', sans-serif;
+  color: white;
+  font-size: 7vh;
+}
+#body{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.results{
+  text-align: center;
+  display: flex;
+  /*padding: 4vh 0 3vh 0;*/
+  flex-wrap:wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-device-width : 1000px){
+  .results{
+    padding: 0 5vw;
+    width: auto;
+    background-color: #EEEEEE;
+    flex-direction: row;
+  }
+}

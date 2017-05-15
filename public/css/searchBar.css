@@ -1,0 +1,115 @@
+/* Variables */
+:root {
+
+  /*******Main Element Size */
+  --main-elem-size: 2rem;
+  /*******Main Font Size */
+  --main-font-size: 1rem;
+  /*******Main Body Width */
+  --main-body-width: 70%;
+  /*******Main Background */
+  --main-bg-color: white;
+  /*******Border Radius */
+  --bd-radius: 3px;
+  /*******Focus Border Color */
+  --focus-bd-color: #008ABF;
+  /*******Focus Text Color */
+  --focus-txt-color: #008ABF;
+  /*******Icon Color */
+  --main-icon-color: #008ABF;
+}
+
+.search-container{
+  align-self: center;
+  margin: 40px 0;
+  padding: 2px 5px;
+  background: var(--main-bg-color);
+  border-radius: var(--bd-radius);
+  border: 1px solid var(--main-bg-color);
+  transition: 0.35s ease;
+  width: var(--main-body-width);
+  height: var(--main-elem-size);
+}
+.focused {
+  border: 1px solid var(--focus-bd-color);
+  transition: 0.35s ease;
+  outline: outline;
+}
+input#search-bar{
+  width: 85%;
+  border: none;
+  height: var(--main-elem-size);
+  font-size: var(--main-font-size);
+}
+input#search-bar:focus{
+  outline: none;
+  color: var(--focus-txt-color);
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.search-icon{
+  font-size: var(--main-font-size);
+  height: var(--main-elem-size);
+  width: 30px;
+  float: right;
+  outline: none;
+  color: var(--main-icon-color);
+  margin-left:-2px;
+  background: var(--main-bg-color);
+  border: none;
+  cursor: pointer;
+}
+
+/*==================================================================*/
+/*===================Responsive Media Breakpoints===================*/
+/*==================================================================*/
+
+@media only screen and (max-width: 1024px) {
+
+  /* Variables */
+    :root {
+
+      /*******Main Element Size */
+      --main-elem-size: 4rem;
+      /*******Main Font Size */
+      --main-font-size: 1.8rem;
+      /*******Main Body Width */
+      --main-body-width: 90%;
+    }
+
+    .search-icon{
+      width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  /* Variables */
+    :root {
+      /*******Main Element Size */
+      --main-elem-size: 2rem;
+      /*******Main Font Size */
+      --main-font-size: 1.3rem;
+    }
+    .search-container{
+      margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+
+    input#search-bar{
+      width: 70%;
+    }
+}

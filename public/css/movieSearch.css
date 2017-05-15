@@ -1,0 +1,121 @@
+
+/*************Description*************/
+/************************************/
+
+.description{
+
+	/*background: url(https://image.tmdb.org/t/p/original/fp6X6yhgcxzxCpmM0EVC6V9B8XB.jpg) fixed;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/*opacity: 0.5;*/
+}
+.backdrop{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(211, 211, 211, 0.6);
+}
+.cover{
+	width: 35vw;
+	padding: 10px 8px;
+}
+.img-cover{
+	width: 100%;
+	height: auto;
+}
+.info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 58vw;
+	font-family: "Rubik";
+}
+.info *{
+	align-self: center;
+	margin: 1vh;
+}
+.info h2{
+	font-family: "Lato";
+	font-size: 1.2em;
+}
+.overview{
+	margin: 0;
+	padding: 10px 10px;
+	text-align: center;
+	font-family: "Neuton";
+	background-color: rgba(211, 211, 211, 0.4);
+	border-top: 2px solid rgba(211, 211, 211, 0.6);
+	line-height: 1.3rem;
+}
+@media only screen and (min-device-width : 600px){
+	.overview{
+		padding: 5vw 5vw;
+		text-align:left;
+		font-size: 5vw;
+		line-height: 6vw;
+	}
+	.info h1{
+		font-size: 8vw;
+	}
+	.info h2{
+		font-size: 4vw;
+	}
+}
+@media only screen and (min-device-width : 1000px){
+	.cover{
+		width: 40vw;
+	}
+	.img-cover{
+		width: 30%;
+	}
+	.info{
+		width: 40vw;
+	}
+	.info h1{
+		font-size: 4vw;
+	}
+	.info h2{
+		font-size: 2vw;
+	}
+	.overview{
+		padding: 5vw 15vw;
+		font-size: 1.7vw;
+		line-height: 2vw;
+	}
+}
+
+/*************Trailer*************/
+/*********************************/
+
+.trailer{
+	width: 100%;
+}
+.trailer-title{
+	color: #292828;
+	text-align: center;
+	font-family: "Rubik";
+	font-size: 1.5em;
+	margin-top: 15vw;
+}
+.trailer iframe{
+	/*height: auto;
+	width: 95vw;*/
+}
+@media only screen and (min-device-width : 700px) {
+	.trailer-title{
+		font-size: 7vw;
+	}
+}
+@media only screen and (min-device-width : 1000px){
+	.trailer{
+		background-color: rgb(238, 238, 238);
+	}
+	.trailer-title{
+		margin: 0 2vw;
+		text-align: right;
+		margin-top: 5vw;
+		margin-right: 5vw;
+		margin-bottom: 2vw;
+		font-size: 3vw;
+	}
+}

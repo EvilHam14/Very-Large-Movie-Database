@@ -1,0 +1,118 @@
+.how-it-works:{
+}
+.hidden-content{
+  margin-top: -1px;
+  visibility: hidden;
+  background-color: green;
+  transition: all 0.7s;
+  height: 0;
+  display: flex;;
+  flex-direction: column;
+  justify-content: center;
+}
+.hidden-content *{
+  opacity: 0;
+  transition: all 0.4s;
+}
+.expose{
+  opacity: 1;
+}
+.hidden-content .hidden-content-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px 0;
+}
+.reveal{
+  padding-top: 6vw;
+  height: 150px;
+  visibility: visible;
+}
+.hidden-content .hidden-content-top h2 {
+  margin-right: 10vw;
+  align-self: center;
+  font-family: "Rubik";
+  color: #071C24;
+}
+.hidden-content img{
+  width: 78px;
+  height: 69px;
+  align-self: center;
+}
+.hidden-content-bottom{
+  padding: 15px;
+  text-align: center;
+  font-family: "Lato";
+  color: #071C24;
+}
+.hidden-content-bottom a{
+  color: #9CD133;
+  text-decoration: underline;
+
+}
+button.tab{
+	position: relative;
+	display: inline-block;
+	padding: 1em;
+  margin: 0;
+  margin-left:1vw;
+  margin-top: -8px;
+  color: white;
+  transition: all 0.7s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+button.tab:focus, input[type="button"]:focus{
+  outline: none;
+  background: none;
+}
+button.tab::before {
+	content: ''; /* To generate the box */
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+	background: green;
+	transform: perspective(4px) rotateX(-1deg);
+}
+
+button.tab::before {
+	/* Tip by @krofdrakula */
+	border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (min-device-width : 600px) {
+  .hidden-content .hidden-content-top, .hidden-content .hidden-content-bottom{
+    font-size: 3.5vw;
+  }
+  .hidden-content .hidden-content-top img{
+    /*width: 104px;
+    height: 92px;*/
+    width: 15vw;
+    height: auto;
+  }
+  button.tab{
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-device-width : 1000px){
+  button.tab{
+    font-size: 1vw;
+  }
+  .hidden-content .hidden-content-top, .hidden-content .hidden-content-bottom{
+    font-size: 1.5vw;
+  }
+  .hidden-content .hidden-content-top img{
+    width: 10vw;
+  }
+  .hidden-content .hidden-content-top h2{
+    margin-right: 5vw;
+  }
+  .hidden-content .hidden-content-top{
+    margin-top: 2vw;
+  }
+  .hidden-content .hidden-content-bottom{
+    margin: 3vw 0;
+    font-size: 1.8vw;
+  }

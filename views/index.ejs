@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#db5945">
+    <meta charset="UTF-8">
+    <title>Very Large Movie Database</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/searchBar.css">
+    <link rel="stylesheet" type="text/css" href="/css/baseStyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/noResults.css">
+    <link rel="stylesheet" type="text/css" href="/css/tab.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <section id="header">
+    <h3>Very Large</h3>
+    <h1>Movie Database</h1>
+  </section>
+  
+  
+  <div class="how-it-works">
+      <div class="hidden-content ">
+        <div class="hidden-content-top">
+          <h2>Powered by</h2>
+          <img src="https://www.themoviedb.org/assets/static_cache/afc8955ea7e6aabcf0c9d8254346b928/images/v4/logos/312x276-primary-blue.png" alt="">
+        </div>
+        <div class="hidden-content-bottom">
+          <p class="hidden-content-p">Open source API that extends it's features out to users. Learn more at <span><a href="https://www.themoviedb.org/">www.themoviedb.org</a></span></p>
+        </div>
+      </div>
+      <button class="tab">How it Works</button>
+    </div>
+
+    <section id="body">
+      
+      
+      
+      <form class="search-container" action="/searchMovie" method="POST">
+        <input type="text" id="search-bar" name="searchingMovie" placeholder="Search for anything">
+        <button class="search-icon" type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      
+      
+
+    <div class="results">
+      
+      <%if ( titleSearch != "kwunnwl02iks2234s") { %>
+
+        <%if ( data["total_results"] == 0) { %>
+            <% include noResults %>
+        <% } %>
+      
+        <% data["results"].forEach(function(movie){ %>
+      
+      <a href="https://webdevbootcamp-tyler1414.c9users.io/movie/id/<%=movie["id"]%>" class="movie">
+          <div class="content cover">
+            
+            <% if(movie["poster_path"] != null){ %>
+            
+              <img src= <%= "https:\//image.tmdb.org/t/p/w500/" + movie["poster_path"]%>>
+              
+            <% } else{ %>  
+            
+              <img src="http://www.gamezshop.com/wp-content/themes/myarcadetheme/images/noimg.png">
+              
+            <% } %>
+            
+          
+          </div>
+          <div class="content title">
+            <h1><%=movie["title"]%></h1>
+          </div>
+      </a>
+        
+      
+    <% }); %>
+      <% } %>
+      
+      
+    
+    </div>
+
+    </section>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="/js/searchBar.js"></script>
+  <script type="text/javascript" src="/js/tab.js"></script>
+  </body>
+</html>

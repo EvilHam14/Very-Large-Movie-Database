@@ -1,0 +1,29 @@
+{
+  "name": "movieapp",
+  "version": "1.0.0",
+  "description": "Search your favorite movies and TV shows.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "movie",
+    "app",
+    "responsive",
+    "dictionary",
+    "list",
+    "shows",
+    "database",
+    "info"
+  ],
+  "author": "Tyler Ferrara",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.16.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "path": "^0.12.7",
+    "request": "^2.79.0"
+  }
+}
